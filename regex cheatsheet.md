@@ -1,14 +1,14 @@
 ---
-title: regex-sheatsheet
-description: regex all necessary commands for programming
-created: 2022-10-23
-updated: 2022-10-23
-Author: Soham Gupta
----
-# Regular Expressions Cheatsheet
-### Regular expressions (also referred to as rational expressions) are sequences of characters that specify a search pattern in the text. Such patterns are often used in string-searching algorithms to perform "find" and "find and replace" operations on strings, or to validate inputs. 
+Title: Regex Cheatsheet
+Description: All necessary regex commands for programming
+Created: 2022-10-23
+Updated: 2022-10-23
 
-<br>
+---
+## Author: [Soham Gupta](https://linkedin.com/in/soham-gupta-in)
+# Regular Expressions Cheatsheet
+#### Regular expressions (also referred to as rational expressions) are sequences of characters that specify a search pattern in the text. Such patterns are often used in string-searching algorithms to perform "find" and "find and replace" operations on strings, or to validate inputs. 
+
 <br>
 
 ## Anchors
@@ -33,6 +33,7 @@ Author: Soham Gupta
 |:-----:|:-------------:|:---------:|:-------------:|
 | **+** | **1 or more** |  **{3,}** | **3 or more** |
 | **?** |   **0 or 1**  | **{3,5}** | **3, 4 or 5** |
+
 Add a ? to a quantifier to make it ungreedy.   
 <br/>
 <hr>
@@ -51,6 +52,7 @@ Add a ? to a quantifier to make it ungreedy.
 | [A-Q]    | Upper case letter from A to Q      |
 | [0-7]    | Digit from 0 to 7                  |
 | \x       | Group/­sub­pattern number "­x"        |
+
 Ranges are inclusive.
 <br/>
 <hr>
@@ -62,17 +64,19 @@ Ranges are inclusive.
 | \          | Escape following character     |
 | \Q         | Begin literal sequence         |
 | \E         | End literal sequence           |
-"­Esc­api­ng" is a way of treating characters which have a special meaning in regex literally, rather than as special charac­ters.
+
+"Escaping" is a way of treating characters which have a special meaning in regex literally, rather than as special charac­ters.
 <br/>
 <hr>
 
-## Common Metach­ara­cters
+## Common Metacharacters
 
 | ^     | [     | .      | $      |
 |-------|-------|--------|--------|
 | **{** | *     | **(**  | **\**  |
 | **+** | **)** | **\|** | **?**  |
 | **<** | **>** |        |        |
+
 The escape character is usually \
 <br/>
 <hr>
@@ -106,18 +110,19 @@ The escape character is usually \
 <br/>
 <hr>
 
-## String Replac­ement
+## String Replacement
 
 | Operator |           Description          |
 |:--------:|:------------------------------:|
-|    $n    |      nth non-pa­ssive group    |
-|    $2    |   "­xyz­" in /^(abc­(xy­z))$   |
-|    $1    | "­xyz­" in /^(?:a­bc)­(xyz)$/  |
+|    $n    |      nth non-passive group    |
+|    $2    |   "xyz" in /^(abc(xyz))$   |
+|    $1    | "xyz" in /^(?:abc)(xyz)$/  |
 |    $`    |      Before matched string     |
 |    $'    |      After matched string      |
 |    $+    |       Last matched string      |
 |    $&    |      Entire matched string     |
-Some regex implem­ent­ations use \ instead of $.
+
+Some regex implementations use \ instead of $.
 <br/>
 <hr>
 
@@ -132,5 +137,6 @@ Some regex implem­ent­ations use \ instead of $.
 |    x *   | Allow comments and whitespace in pattern |
 |    e *   |           Evaluate replac­ement           |
 |    U *   |             Ungreedy pattern             |
-* PCRE modifier
+
+- '*' --> PCRE modifier
 <br/>
